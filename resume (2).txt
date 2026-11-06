@@ -524,144 +524,139 @@ Q12：数据量再大 100 倍怎么办？
 
 
 
-项目介绍（面试用）
-Project Introduction · Bilingual Script
+
+项目介绍（面试用·5 分钟）
+Project Introduction · 5 Minutes · Bilingual
 项目 / Item	内容 / Content
 用途 / Purpose	面试项目介绍 / Interview project presentation
-时长 / Duration	约 10 分钟 / ~10 minutes
+时长 / Duration	约 5 分钟 / about 5 minutes
 形式 / Format	中英文对照口述稿 / Bilingual speaking script
 日期 / Date	2026-11-06
-包含 / Includes	时间分配、可能被追问的问题、30 秒电梯版 / Timing, likely Q&A, 30-sec pitch
+包含 / Includes	时间分配、可能被问的问题、30 秒版 / Timing, likely Q&A, 30-sec version
 
  
-项目介绍（面试用·中英文对照）
-Project Introduction (Interview Script · Bilingual)
-时长：约 10 分钟 ｜ Duration: ~10 minutes
-用法：每节左侧为中文口述稿，右侧为英文对照；括号内为时间提示与动作提示。
-How to use: Chinese on the left, English on the right; brackets = timing and delivery cues.
+项目介绍（面试用·5 分钟·中英文对照）
+Project Introduction (Interview · 5 Minutes · Bilingual)
+时长：约 5 分钟 ｜ Duration: about 5 minutes
+用法：中文是口述稿，英文是对照；括号里是时间提示。
+How to use: Chinese is the speaking script, English is the reference; brackets show timing.
 
 时间分配 / Time Budget
-段落 Section	中文	English	时长
-1. 开场定位	一句话说清这个项目是什么	One-sentence positioning	0:30
-2. 背景与痛点	为什么需要它	Why it was needed	1:30
-3. 我的方案	我怎么做的	What I built	2:30
-4. 技术难点	三个最难的点	Three hardest problems	2:30
-5. 成果与影响	数字说话	Results in numbers	1:30
-6. 反思与收获	我学到了什么	What I learned	1:00
-7. 收尾	一句话总结	Closing line	0:30
-合计			10:00
+段落 Section	内容 Content	时长
+1	一句话介绍 / One-line intro	0:30
+2	问题是什么 / The problem	0:45
+3	我怎么做 / What I built	1:30
+4	最难的三件事 / Three hard parts	1:00
+5	结果 / Results	0:45
+6	收尾 / Closing	0:30
+	合计 / Total	5:00
 
 
-1. 开场定位（0:30）
+1. 一句话介绍（0:30）
 中文：
-我最近主导的一个项目，是把「Wi-Fi 和蓝牙共存性能的周报」从纯人工做成全自动。简单说：三台测试机跑出来的几百条实测数据，原来要人工翻表、对标准、算通过率、排版写邮件，大概一两个小时；现在一条命令，一分多钟，一份格式统一的周报邮件就发出去了，而且数据可回溯、失败自动告警。
+我做过一个项目，把「Wi-Fi 和蓝牙共存性能的周报」从人工做成了自动做。
+以前要一两个小时：翻三个机器的表格、对标准、算通过率、排版写邮件。
+现在一条命令，一分多钟，邮件就发出去了。
 English:
-The project I want to walk you through is turning the weekly "Wi-Fi and Bluetooth coexistence performance report" from a fully manual process into a fully automated one. In short: several hundred measured data points from three test machines used to take one to two hours of manual spreadsheet work, KPI comparison, pass-rate calculation and email formatting. Now it's one command, about a minute, and a standardized weekly report email goes out — with full traceability and automatic failure alerts.
-动作：说完停一秒，看对方反应。这句话里已经包含了「做什么、多大工作量、提升多少」，后面的内容都是展开它。
-Cue: pause one second. This sentence already contains what / how big / how much better. Everything after is elaboration.
+I worked on a project that turned our weekly "Wi-Fi and Bluetooth coexistence performance report" from manual work into an automatic one.
+Before, it took one to two hours: opening spreadsheets from three machines, comparing against standards, calculating pass rates, and formatting an email.
+Now it's one command, a little over a minute, and the email is sent.
+动作：说完停一下。这句话里有「做什么、多大工作量、快了多少」，后面都是展开。
+Cue: pause. This sentence already covers what, how much work, and how much faster.
 
-2. 背景与痛点（1:30）
+2. 问题是什么（0:45）
 中文：
-先说背景。Wi-Fi 和蓝牙工作在相近的频段，同一台设备上同时使用时，会互相干扰，行业里叫「共存」。共存做得好不好，直接决定用户刷视频会不会卡、耳机连着手机会不会断。
-我们的评估方法是：在屏蔽柜里用 iperf3 跑 TCP 流量，同时打开不同的蓝牙业务——关闭、已连接、放音乐、打电话、星闪音乐等等——然后测量不同带宽、不同上下行、不同信号衰减下的实际吞吐，再跟 KPI 标准值比对。
-痛点有三个。第一，数据分散在三台机器上，人工汇总容易漏。第二，用例口径混乱——模板里有大量空行，跑过的、没跑过的、跑失败的混在一起，通过率算出来每次都不一样。第三，KPI 标准散在好几份 Excel 里，人工比对既慢又容易错位。
+先说背景。Wi-Fi 和蓝牙用相近的频段，同一台设备上一起用会互相干扰，这个叫「共存」。
+共存做得好不好，直接影响用户：看视频会不会卡，耳机连着手机稳不稳。
+我们的测法是在屏蔽柜里跑网络测速，同时开不同的蓝牙业务——关掉、连着、放音乐、打电话——看网速掉多少，再跟标准值比。
+问题有三个：数据散在三台机器上，容易漏；表格里空行特别多，哪些真跑过说不清，所以每次算出的通过率都不一样；标准值散在好几个 Excel 里，人工对容易错行。
 English:
-Some background first. Wi-Fi and Bluetooth operate in adjacent frequency bands, so when they run simultaneously on the same device they interfere with each other — the industry calls it "coexistence." How well coexistence is handled directly determines whether video stutters or whether earbuds disconnect from the phone.
-Our evaluation method: run TCP traffic with iperf3 inside a shielded chamber while enabling different Bluetooth services — off, connected, music playback, phone call, SparkLink music, and so on — then measure actual throughput under different bandwidths, uplink/downlink directions and signal attenuation levels, and compare against the KPI baseline.
-There were three pain points. First, data was scattered across three machines, and manual aggregation missed things. Second, the case scope was messy — the templates contained thousands of empty rows, and executed, non-executed and failed cases were all mixed together, so the pass rate came out different every time. Third, KPI baselines were spread across several Excel files, making manual comparison slow and error-prone.
-动作：讲痛点时可以稍微放慢，因为这是对方理解「你为什么值得做这件事」的关键。
-Cue: slow down slightly here — this is where the interviewer understands why the work mattered.
+Some background. Wi-Fi and Bluetooth use nearby frequency bands, so using them at the same time on one device causes interference. We call this "coexistence."
+How well it works directly affects users: whether video stutters, whether earbuds stay connected.
+Our test method: run a network speed test inside a shielded room while different Bluetooth services are on — off, connected, music, phone call — and see how much speed drops, then compare with the standard value.
+Three problems: data was spread across three machines and easy to miss; the spreadsheets had lots of empty rows, so it was unclear which cases really ran, and the pass rate came out different every time; and standard values were spread across several Excel files, so manual comparison easily picked the wrong row.
+动作：三个问题可以数着说「第一、第二、第三」，让对方跟得上。
+Cue: count them — first, second, third — so the listener can follow.
 
-3. 我的方案（2:30）
+3. 我怎么做（1:30）
 中文：
-我的做法是设计一条端到端的自动化流水线，分五步。
-第一步，数据接入。 三台机器（ip177、ip176、ip39）的测试框架不完全一样，目录结构一个是单框架、一个是双框架。我做了一层适配：本机直接读本地盘，其他机器走网络共享，并且用 IP 而不是机器名拼路径——这一点是踩过坑的，用机器名永远连不上。同时做了深度限制扫描，因为共享目录下有几十万个小文件，全量递归会直接超时。
-第二步，口径统一。 这是最关键的一步。我以 CIDA（我们的用例管理平台）的执行记录作为唯一权威，只统计真正跑过的用例。跑过但没出数据的，标记为「无实测值」，既不丢掉、也不计入达标率分母。这里有个大坑：CIDA 标准库的用例编号和本地执行编号是两套命名空间，长得像但完全对不上，早期用 CIDA 编号做过滤，结果把所有有数据的行全过滤掉了。
-第三步，KPI 判定。 唯一键是「业务 + 用例编号 + 上行/下行」，上行下行分别判定，不合并。基线匹配做了四层兜底：主 KPI 表单按场景匹配、旧文件按场景键兜底、旧文件按用例编号兜底、P2P 场景复用 STA 基线。都找不到就如实标「无基线」，绝不猜。
-第四步，出报告。 格式完全固定：标题横幅、测试环境、一句话总结、测试概述、详细数据路径、详细数据。领导只看「一句话总结」就能掌握结论。同时生成结果 Excel、衰减曲线图，历史数据最多并排 3 期。
-第五步，发送与留痕。 通过 Outlook 自动发送，发完核对「已发送邮件」；结果、报告、图表、告警清单、原始执行日志全部归档到 D 盘，按日期可回溯。
+我把它做成了一条自动流程，分五步。
+第一步，读数据。 三台机器的目录结构不一样，我做了适配。本机直接读硬盘，另外两台走网络共享。这里有个坑：共享要用 IP 地址连，用电脑名连不上。
+第二步，定范围。 这是最关键的一步。我只统计真正跑过的用例，以我们的用例平台记录为准。跑过但没出数据的，单独标出来，不算进通过率的分母。
+第三步，判达标。 每条数据跟标准值比，达到就算通过，没达到就算失败。上行和下行分开算，不合并。标准值找不到的，就老实写「无标准」，不猜。
+第四步，出报告。 格式是固定的：标题、测试环境、一句话总结、总体情况、详细数据。领导只看「一句话总结」就知道结论。同时生成 Excel 和曲线图。
+第五步，发送和存档。 用 Outlook 自动发，发完核对一遍。结果、报告、图、原始日志全部存到 D 盘，按日期能查回来。
 English:
-My approach was an end-to-end automated pipeline in five steps.
-Step one, data ingestion. The three machines (ip177, ip176, ip39) don't use identical test frameworks — one is single-framework, one is dual-framework, with different directory layouts. I built an adapter layer: the local machine reads from its own disk, the others go over network shares, and I address them by IP rather than hostname — that was a hard-learned lesson, hostname-based UNC paths simply never connect. I also restricted the directory scan depth, because those shares contain hundreds of thousands of small files and a full recursive walk times out.
-Step two, unifying the case scope. This is the most important step. I treat CIDA — our test case management platform — execution records as the single source of truth, counting only cases that actually ran. Cases that ran but produced no data are marked "no measurement": they're neither dropped nor counted in the pass-rate denominator. There was a major trap here: CIDA's standard case numbers and our local execution numbers are two different namespaces that look alike but never match. Early on I filtered by CIDA numbers and wiped out every row that had data.
-Step three, KPI judgement. The unique key is "business + case ID + uplink/downlink," with uplink and downlink judged separately, never merged. Baseline matching has four fallback layers: the main KPI workbook matched by scenario, the legacy workbook matched by scenario key, the legacy workbook matched by case ID, and P2P scenarios reusing the STA baseline. If none match, it's honestly labeled "no baseline" — never guessed.
-Step four, generating the report. The format is completely fixed: title banner, test environment, one-line summary, test overview, data path, detailed data. Leadership can grasp the conclusion from the one-line summary alone. It also produces a result workbook and attenuation curves, with up to three historical periods shown side by side.
-Step five, delivery and traceability. Sent automatically via Outlook, then verified in the Sent Items folder. Results, reports, charts, alert lists and raw execution logs are all archived to the D drive, traceable by date.
-动作：五步要讲出层次感，每步一句话点出「做了什么 + 一个坑」，比平铺直叙有说服力。
-Cue: give the five steps a sense of progression — each one a "what I did + one trap" pair. Much stronger than a flat list.
+I built it into one automatic flow, in five steps.
+Step one, read the data. The three machines have different folder structures, so I adapted for each. The local machine reads its own disk; the other two go over the network share. One trap: the share must be reached by IP address, not by computer name.
+Step two, define the scope. This is the most important step. I only count cases that actually ran, based on our case platform's records. Cases that ran but produced no data are marked separately and not counted in the pass-rate denominator.
+Step three, judge pass or fail. Each data point is compared with the standard value: at or above means pass, below means fail. Uplink and downlink are judged separately, never merged. If no standard value is found, it honestly says "no standard" — no guessing.
+Step four, generate the report. The format is fixed: title, test environment, one-line summary, overall results, detailed data. Leadership can read just the one-line summary to get the conclusion. It also produces an Excel file and curve charts.
+Step five, send and archive. Sent automatically through Outlook, then verified. Results, report, charts and raw logs are all saved to the D drive, searchable by date.
+动作：五步每步一句「做了什么 + 一个坑」，比平铺直叙有说服力。
+Cue: one line per step — what I did plus one trap. Stronger than a flat list.
 
-4. 技术难点（2:30）
+4. 最难的三件事（1:00）
 中文：
-我想重点讲三个最难的点。
-第一个是衰减数据的判定。 衰减测试是逐步加大信号衰减，看吞吐在哪个点崩掉。这里有两个坑叠加。第一，衰减档位不能按列号推算——表头每列递增 2，但数据只写在偶数列，按列号算会把 32 dB 当成 16 dB，结果拿 32 dB 的实测去比 56 dB 的基线，衰减数据几乎全部误判为通过。第二，上下行的基线必须分开取——同一用例 TX 和 RX 的基线值不同，只取第一块会让下行实测去比更低的基线，失败被系统性低估。这两个 bug 叠加时，衰减部分看起来通过率 63%，实际只有 32.7%。
-第二个是历史对比的可信度。 领导会拿这一期和上期比。但归档的数据里，有时候这一期和上期是同一份数据——比如上期没跑完，这期补跑，值一模一样。如果直接并排显示，领导会以为「两周数据完全一致，是不是没测」。我的做法是逐值比对，完全相同的不显示；某一期整列都无有效值，整列不显示。
-第三个是邮件渲染。 曲线图要嵌在邮件正文里。Outlook 的渲染引擎不认 base64 内联图片，收件人只看到一个红叉。最后改成 cid 内联附件，给附件设 Content-ID，HTML 里用 cid 引用，才正常显示。这类问题不写代码也能想到，但不踩一遍真不知道。
+第一，衰减数据的判定。 衰减测试是慢慢加大信号损失，看网速在哪个点掉下来。这里有两个错叠在一起：一是读错了衰减档位，把 32 当成 16，结果拿实测去比了错的标准；二是上行和下行的标准值不一样，我只取了一份。两个错一起，衰减部分看着通过率 63%，实际只有 32.7%。
+第二，历史数据不能误导人。 领导会拿这期跟上期比。但有时候两期其实是同一份数据，值一模一样。直接并排显示，会让人以为「两周都没测」。所以我改成逐个值比，一样的不显示。
+第三，邮件里的图显示不出来。 Outlook 不认网页里嵌的图片，收件人只看到红叉。最后改成把图作为附件内嵌，才正常显示。
 English:
-Let me highlight the three hardest problems.
-The first is attenuation judgement. Attenuation testing gradually increases signal loss to find the point where throughput collapses. Two traps compounded here. First, attenuation levels cannot be inferred from column position — the header increments by 2 per column, but data only appears in even columns, so column-based math labels 32 dB as 16 dB, comparing a 32 dB measurement against a 56 dB baseline and marking almost everything as passing. Second, uplink and downlink baselines must be taken separately — the same case has different TX and RX baselines, and taking only the first block makes downlink measurements compare against a lower baseline, systematically under-reporting failures. With both bugs present, the attenuation section looked like a 63% pass rate when it was actually 32.7%.
-The second is the credibility of historical comparison. Leadership compares this period against the last one. But in the archive, sometimes this period and the last are the same data — for instance, last period didn't finish and this period re-ran it, producing identical values. Displayed side by side, it looks like "two weeks of identical data, did you even test?" So I compare value by value, hiding identical ones, and drop an entire period's column when nothing in it is meaningful.
-The third is email rendering. The curves need to be embedded in the email body. Outlook's rendering engine doesn't support base64 inline images — recipients just see a red X. I switched to cid inline attachments: set the Content-ID on the attachment and reference it via cid in the HTML. It's the kind of thing you can't anticipate without hitting it once.
-动作：三个难点按「影响多大 → 怎么发现 → 怎么修」讲，每个控制在 50 秒内。第一个最出彩，可以多给 10 秒。
-Cue: for each problem, cover impact → how I found it → how I fixed it, about 50 seconds each. The first is the strongest — give it an extra 10 seconds.
+First, judging attenuation data. Attenuation testing slowly increases signal loss to see where speed drops off. Two mistakes stacked here: one, I read the wrong attenuation level, treating 32 as 16, so measurements were compared against the wrong standard; two, uplink and downlink have different standards, and I only used one. Together, the attenuation section looked like a 63% pass rate when it was really 32.7%.
+Second, history must not mislead. Leadership compares this period with the last one. But sometimes the two periods are actually the same data with identical values. Shown side by side, it looks like "you didn't test for two weeks." So I compare value by value and hide the identical ones.
+Third, images wouldn't show in email. Outlook doesn't display images embedded in the web page, so recipients only saw a red X. I changed it to embed the images as attachments, and then they displayed correctly.
+动作：三件事按「影响多大 → 怎么发现 → 怎么改」讲。第一件最出彩，可以多给几秒。
+Cue: for each, cover impact, how I found it, how I fixed it. The first is strongest.
 
-5. 成果与影响（1:30）
+5. 结果（0:45）
 中文：
-成果我用四个数字说。
-第一，效率。 从一到两小时降到一分多钟，实测三台机器串行汇总 79 秒。这里我做过一个反直觉的验证：我本来以为并行会更快，就让三台机器各自解析再汇总，结果要 8 到 11 分钟——瓶颈不在数据读取，而在子任务的唤醒排队。所以最后结论是「日常用串行」，这个结论我如实写进了文档，没有为了显得技术先进而硬推并行。
-第二，口径一致性。 达标率的分母统一为「有实测值的用例数」，无实测值不虚增分母。这一条改完之后，不同周次的数字才真正可比。
-第三，可追溯。 每期的结果、报告、图表、告警、原始日志全部落盘，任取一期都能查到当时的原始数据。
-第四，问题前置。 失败用例达到阈值自动告警，不用等领导翻报告才发现。
+结果说四个数。
+一，快了。 从一到两小时降到一分多钟，实测 79 秒。
+二，口径统一了。 通过率的分母只算有数据的用例，不同周的数字终于能比了。
+三，能查了。 每期的结果、图、日志都存着，任取一期都能查到原始数据。
+四，问题能提前发现。 失败多了会自动告警，不用等领导翻报告才知道。
+还有一件事我想说：我本来以为三台机器同时跑会更快，试了之后要 8 到 11 分钟，反而更慢。原因不在读数据，而在等待任务启动。所以最后定的是「日常用串行」，我把这个结论也写进了文档，没有硬推。
 English:
-Four numbers capture the results.
-First, efficiency. From one to two hours down to just over a minute — 79 seconds measured for a serial three-machine aggregation. I ran a counter-intuitive experiment here: I assumed parallel would be faster, so I had each machine parse locally and then aggregate. It took 8 to 11 minutes. The bottleneck wasn't data reading, it was sub-task wake-up and queuing latency. So the conclusion was "use serial for daily reports," and I documented that honestly rather than pushing parallel to look more sophisticated.
-Second, consistent methodology. The pass-rate denominator is unified as "cases with actual measurements," so cases without data don't inflate it. Only after that fix were numbers across weeks genuinely comparable.
-Third, traceability. Every period's results, reports, charts, alerts and raw logs are persisted — any period can be traced back to its original data.
-Fourth, problems surfaced early. Failure counts crossing a threshold trigger automatic alerts, instead of waiting for leadership to dig through the report.
-动作：这里要主动讲「并行反而更慢」这件事——面试官最看重的是你能否诚实地报告负面结论。
-Cue: proactively mention that parallel was slower. Interviewers value honest reporting of negative results more than a polished success story.
+Four numbers.
+One, faster. From one to two hours down to just over a minute — 79 seconds measured.
+Two, consistent counting. The pass-rate denominator only counts cases with data, so numbers across weeks are finally comparable.
+Three, traceable. Every period's results, charts and logs are kept — any period can be traced back to its raw data.
+Four, problems surface early. Many failures trigger an automatic alert, instead of waiting for leadership to dig through the report.
+One more thing: I assumed running all three machines in parallel would be faster. It took 8 to 11 minutes — actually slower. The bottleneck wasn't reading data, it was waiting for tasks to start. So the final choice was "serial for daily use," and I wrote that conclusion into the document rather than pushing parallel anyway.
+动作：主动讲「并行反而更慢」。面试官很看重你愿不愿意如实报告负面结论。
+Cue: volunteer that parallel was slower. Interviewers value honest reporting of negative results.
 
-6. 反思与收获（1:00）
+6. 收尾（0:30）
 中文：
-三点反思。
-第一，需求是会变的，所以格式要固定、口径要写死。 这个项目前后改了二十多轮，从「加一列历史数据」到「失败原因不要写具体差值」，每一轮都是业务方看到报告之后提的新要求。我的应对是把格式骨架和统计口径做成常量，改需求只改数据来源，不动骨架——否则每改一次就要重新验证一遍版式。
-第二，自动化最难的不是写代码，是把隐性规则显性化。 比如「无实测值不计入分母」这条，原来是老师傅脑子里的经验，我把它写成文档里的一句话、代码里的一个常量，它才真正稳定下来。
-第三，踩过的坑要沉淀。 我把 15 个典型坑写进了交接文档，包括「衰减档位不能按列号推算」这种不看代码根本想不到的。这样换人接手不用重新踩一遍。
+一句话总结：这个项目让我走完了一遍「把一个人的经验，变成一套别人也能用的系统」的过程。
+技术上它不算最难，但它要求在数据准确、业务规则、使用体验之间反复取舍。我觉得这最能体现工程能力。
 English:
-Three reflections.
-First, requirements change, so the format must be fixed and the methodology hard-coded. This project went through more than twenty revision rounds — from "add a historical data column" to "don't write specific deltas in the failure reason." Each round came from stakeholders seeing the report and asking for more. My response was to make the format skeleton and statistical methodology constants: changing a requirement only changes the data source, never the skeleton. Otherwise every change means re-validating the whole layout.
-Second, the hardest part of automation isn't writing code — it's making implicit rules explicit. Take "cases without measurements don't count in the denominator." That used to live in a senior engineer's head. I turned it into one sentence in the document and one constant in the code, and only then did it become stable.
-Third, traps must be captured. I wrote 15 typical pitfalls into the handover document, including things like "attenuation levels can't be inferred from column position" that you'd never guess without reading the code. That way the next person doesn't have to rediscover them.
-动作：反思部分要具体，避免「我学到了沟通很重要」这种空话。每条都挂一个具体事实。
-Cue: keep reflections concrete. Avoid platitudes like "I learned communication matters." Anchor each one to a specific fact.
+To sum up: this project took me through the full cycle of turning one person's experience into a system others can use.
+Technically it isn't the hardest thing I've built, but it required constant trade-offs between data accuracy, business rules and usability. I think that's where engineering maturity really shows.
+动作：说完就停，不要补话，把提问空间留给对方。
+Cue: stop talking. Leave room for questions.
 
-7. 收尾（0:30）
-中文：
-一句话总结：这个项目让我完整走了一遍「把一个人的经验，变成一套可复用、可验证、可交接的系统」的过程。技术上它不算最复杂，但它要求你在数据准确性、业务口径和交付体验之间反复权衡——我觉得这恰恰是工程能力最真实的体现。
-English:
-To sum up in one sentence: this project took me through the full cycle of turning one person's experience into a reusable, verifiable, handover-ready system. Technically it isn't the most complex thing I've built, but it demanded constant trade-offs between data accuracy, business methodology and delivery experience — and I think that's exactly where engineering maturity really shows.
-动作：说完停下，不要补话。把提问空间留给对方。
-Cue: stop talking. Leave the space for questions.
-
-附录 A：可能被追问的问题 / Appendix A: Likely Follow-up Questions
-问题 Question	回答要点 Key Points
-为什么不用数据库，而是 Excel + 文件归档？<br>Why Excel plus file archive instead of a database?	数据量不大（每期几百到几千行），归档的核心诉求是「人能直接打开看」；数据库对非技术同事是黑盒。后来确实补了一个 SQLite 库做日志检索，但报告主链路仍走 Excel。<br>Volume is small (hundreds to a few thousand rows per period), and the archive's core requirement is that a human can open it directly; a database is a black box to non-technical colleagues. We did later add a SQLite store for log search, but the main reporting path still uses Excel.
-怎么保证判定结果是对的？<br>How do you know the judgements are correct?	三层校验：① 用已知锚点核对（用户给的具体数值，如 32 dB 对应 233）；② 修正前后对比通过率变化，确认方向合理（衰减档位修正后通过率从 63% 降到 32.7%，符合物理预期）；③ 并行与串行两条路径逐行比对，结果完全一致。<br>Three layers: (1) verify against known anchors (specific values given by users, e.g. 32 dB maps to 233); (2) compare pass rates before and after fixes to confirm the direction makes sense (attenuation fix moved 63% to 32.7%, matching physical expectation); (3) compare parallel and serial paths row by row — identical.
-如果 KPI 标准表结构变了怎么办？<br>What if the KPI baseline workbook structure changes?	这是已知维护点，写在风险清单里。列映射是显式常量，改结构就改常量，并有「基线缺失如实标注」的兜底，不会静默出错。<br>It's a known maintenance point, listed in the risk register. Column mappings are explicit constants — change the structure, change the constants — plus a "label missing baselines honestly" fallback so it never fails silently.
-这个项目你个人做了多少？<br>How much of this did you personally do?	需求梳理、口径定义、方案设计、核心实现、踩坑排查、文档与交接，全流程主导。多机并行部分是后来为了提速做的验证，结论是没必要，如实记录了。<br>I led the entire cycle: requirement analysis, methodology definition, solution design, core implementation, debugging, documentation and handover. The multi-machine parallel part was a later speed experiment; the conclusion was that it wasn't worth it, and I documented that honestly.
-最大的失败是什么？<br>What was your biggest failure?	早期用 CIDA 标准编号做过滤，把所有有数据的行全过滤掉了，报告显示「全部无实测值」。根因是我假设两套编号能对上，没有先做小样本验证。之后我立了规矩：任何跨系统的 ID 匹配，先抽样验证再全量跑。<br>Early on I filtered by CIDA standard numbers and wiped out every row with data — the report showed "no measurements at all." The root cause was assuming two numbering schemes matched without first validating on a small sample. Since then my rule is: any cross-system ID matching gets sample-validated before a full run.
+附录 A：可能被问到的问题 / Appendix A: Likely Questions
+问题 Question	回答 Answer
+为什么用 Excel 不用数据库？<br>Why Excel instead of a database?	数据量不大，一期几百到几千行。而且同事要能直接打开看，数据库对非技术同事是黑盒。<br>The volume is small — hundreds to a few thousand rows per period. And colleagues need to open it directly; a database is a black box to non-technical people.
+怎么保证算得对？<br>How do you know the numbers are right?	用已知的具体数值核对；修正前后对比通过率变化是否合理；两条不同的计算路径逐行比对，结果完全一致。<br>Check against known specific values; compare pass rates before and after a fix to see if the change makes sense; and compare two independent calculation paths row by row — identical.
+你个人做了多少？<br>How much did you personally do?	从需求梳理、规则定义、方案设计、核心实现到排查问题、写文档和交接，全程主导。<br>I led the whole thing: requirement analysis, rule definition, solution design, core implementation, debugging, documentation and handover.
+最大的失误是什么？<br>What was your biggest mistake?	早期我用平台的用例编号去筛数据，结果把有数据的行全筛掉了，报告显示「全部无数据」。原因是我假设两套编号能对上，没先小范围验证。之后我定了规矩：跨系统的编号匹配，先抽样验证再全量跑。<br>Early on I filtered data using the platform's case numbers and wiped out every row that had data — the report showed "no data at all." I had assumed two numbering schemes matched without validating on a small sample first. Since then my rule is: any cross-system ID matching gets sample-checked before a full run.
 
 
-附录 B：30 秒电梯版 / Appendix B: 30-Second Elevator Pitch
-中文： 我把 Wi-Fi 和蓝牙共存性能的周报从人工一两小时做成了一条命令一分多钟，覆盖三台测试机的数据汇总、KPI 判定、报告生成、邮件发送和归档追溯，并且把统计口径固定下来，让不同周次的数字真正可比。
-English: I turned the weekly Wi-Fi/Bluetooth coexistence performance report from one to two hours of manual work into a one-command, one-minute process — covering data aggregation across three test machines, KPI judgement, report generation, email delivery and archival traceability — and I standardized the statistical methodology so numbers across weeks are genuinely comparable.
+附录 B：30 秒版本 / Appendix B: 30-Second Version
+中文： 我把 Wi-Fi 和蓝牙共存性能的周报，从人工一两小时做成了一条命令一分多钟。它管三台机器的数据汇总、达标判定、报告生成、邮件发送和存档追溯，还把统计规则固定下来，让不同周的数字能真正比较。
+English: I turned the weekly Wi-Fi and Bluetooth coexistence performance report from one to two hours of manual work into a one-command, one-minute process. It handles data from three machines, pass/fail judgement, report generation, email delivery and archival — and it fixes the counting rules so numbers across weeks are actually comparable.
 
-附录 C：讲的时候要注意 / Appendix C: Delivery Notes
+附录 C：讲的时候注意 / Appendix C: Delivery Notes
 要点 Point	说明 Note
-先给结论再展开<br>Conclusion first	每节开头一句话说清这节要讲什么，再展开细节。
-数字要具体<br>Be specific with numbers	「79 秒」「63% → 32.7%」「二十多轮」比「很快」「提升明显」有说服力得多。
-主动讲失败<br>Own the failures	面试官更信「我踩过坑并且修好了」，而不是「一次做对」。
-控制节奏<br>Control pacing	每节讲完停一秒。如果对方打断提问，答完再回到原节点，不要跳。
-不要念稿<br>Don't read the script	这份稿子是骨架，用你自己的话说。念稿会显得不熟悉项目。
+先给结论<br>Conclusion first	每段先说这一句要讲什么，再展开。
+数字要具体<br>Use specific numbers	「79 秒」「63% 变成 32.7%」比「很快」「提升明显」有力得多。
+主动讲失误<br>Own the mistakes	面试官更信「踩过坑并改好了」，而不是「一次做对」。
+控制节奏<br>Control pacing	每段讲完停一秒。被打断就答完再回来，不要跳。
+不要念稿<br>Don't read it	这是骨架，用你自己的话说。念稿会显得不熟。
+
+
 
 
 
